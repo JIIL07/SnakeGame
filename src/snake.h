@@ -17,6 +17,8 @@ public:
     bool checkSelfCollision() const;
     void reset();
     QPoint getHeadPosition() const;
+    const QPoint& getHead() const;
+    int length() const;
 
     static int getFIELD_WIDTH();
 

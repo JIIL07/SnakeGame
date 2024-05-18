@@ -13,11 +13,14 @@ public:
     bool isObstacle(const QPoint &point) const;
     bool isFood(const QPoint &point) const;
     void generateFood();
+    QPoint getFood() const;
 
 private:
     QList<QPoint> obstacles;
     QPoint food;
     void loadObstacles(const QString &fileName);
+
+    friend class SnakeGameTest;
 };
 
 #endif // MAP_H

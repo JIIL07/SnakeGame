@@ -63,3 +63,7 @@ void Map::generateFood() {
     food = newFood;
 }
 
+QPoint Map::getFood() const {
+    return food;
+}
+

@@ -97,3 +97,11 @@ Snake::Direction Snake::getDirection() const
 int Snake::getFIELD_WIDTH() {
     return FIELD_WIDTH;
 }
+
+const QPoint& Snake::getHead() const {
+    return body.front();
+}
+
+int Snake::length() const {
+    return body.size();
+}
