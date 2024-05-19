@@ -11,7 +11,7 @@ Map::Map() {
 
 void Map::loadMap(int mapNumber) {
     obstacles.clear();
-    QString fileName = "./resources/map" + QString::number(mapNumber) + ".txt";
+    QString fileName = "../resources/map" + QString::number(mapNumber) + ".txt";
     loadObstacles(fileName);
     generateFood();
 }

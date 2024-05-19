@@ -10,10 +10,11 @@ set(SOURCE_FILES
 )
 
 set(TEST_SOURCES
+    snakegametest.h
     snakegametest.cpp
 )
 
 add_executable(SnakeGameTest ${TEST_SOURCES} ${SOURCE_FILES})
 target_link_libraries(SnakeGameTest Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Test)
-install(TARGETS SnakeGameTest DESTINATION bin)
+install(TARGETS SnakeGameTest DESTINATION tests)
 add_test(NAME SnakeGameTest COMMAND SnakeGameTest)

@@ -31,11 +31,19 @@ set(RESOURCE_FILES
     resources/map4.txt
 )
 
-add_executable(SnakeGame main.cpp ${SOURCE_FILES})
+add_executable(SnakeGame main.cpp ${SOURCE_FILES} )
+
 target_link_libraries(SnakeGame Qt6::Core Qt6::Gui Qt6::Widgets)
 
+set_target_properties(SnakeGame PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+)
+
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/resources)
+file(COPY ${RESOURCE_FILES} DESTINATION ${CMAKE_BINARY_DIR}/resources)
+
 install(TARGETS SnakeGame DESTINATION bin)
-install(FILES ${RESOURCE_FILES} DESTINATION bin/resources)
+install(FILES ${RESOURCE_FILES} DESTINATION resources)
 
 enable_testing()
 add_subdirectory(tests)

@@ -43,14 +43,14 @@ void SnakeGameTest::testFoodGeneration() {
 
 void SnakeGameTest::testFoodNotOnObstacle() {
     Map map;
-    map.loadObstacles("resources/map2.txt");  // Load a map with obstacles
+    map.loadObstacles("../resources/map2.txt");  // Load a map with obstacles
     map.generateFood();
     QVERIFY(!map.isObstacle(map.getFood()));
 }
 
 void SnakeGameTest::testMapLoadObstacles() {
     Map map;
-    map.loadObstacles("resources/map2.txt");
+    map.loadObstacles("../resources/map2.txt");
     QVERIFY(map.isObstacle(QPoint(0, 0)));  // Assuming (0, 0) is an obstacle in map2.txt
 }
 
